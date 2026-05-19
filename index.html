@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk MVP</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema Help Desk</h1>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Abrir Chamado</a>
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="formulario">
+            <h2>Abertura de Chamado</h2>
+
+            <form id="formChamado">
+
+                <input type="text" id="titulo" placeholder="Título do chamado">
+
+                <textarea id="descricao" placeholder="Descrição do problema"></textarea>
+
+                <select id="status">
+                    <option value="">Selecione o status</option>
+                    <option>Aberto</option>
+                    <option>Em andamento</option>
+                    <option>Concluído</option>
+                </select>
+
+                <button type="submit">Cadastrar Chamado</button>
+
+            </form>
+
+            <p id="mensagem"></p>
+        </section>
+
+        <section class="lista">
+            <h2>Chamados Abertos</h2>
+
+            <input type="text" id="buscar" placeholder="Buscar chamado">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaChamados">
+
+                </tbody>
+
+            </table>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

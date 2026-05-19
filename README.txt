@@ -44,7 +44,4 @@ help-desk-mvp/
 - GitHub
 
 ## Integrantes
-- João
-- Maria
-- Pedro
-- Ana
+gustavo vieira

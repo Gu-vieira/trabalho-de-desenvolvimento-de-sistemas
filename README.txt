@@ -43,21 +43,17 @@ help-desk-mvp/
 
 ## Melhorias Aplicadas na SA03
 
-- Organização das pastas do projeto;
-
-- Padronização de nomes;
-
-- Refatoração do JavaScript;
-
-- Melhorias no CSS;
-
-- Correção de validação de formulário;
-
-- HTML mais semântico;
-
-- Melhor legibilidade do código;
-
-- Separação de responsabilidades.
+Tarefa|	Responsável|	Prioridade	|Status
+Organizar estrutura de pastas |Gustavo|	Alta|	Concluído
+Padronizar CSS|	Gustavo|	Média	|Concluído
+Refatorar JavaScript|	Gustavo|Alta	|Concluído
+Atualizar README	|Gustavo|	Média|	Concluído
+Revisar HTML semântico|	Gustavo|	Média	|Concluído
+Melhorar validação do formulário|	Gustavo|	Alta|	Concluído
+Reduzir repetição de estilos CSS|	Gustavo	|Média|	Concluído
+Organizar funções JavaScript|	Gustavo	|Média|	Concluído
+Criar checklist de boas práticas|	Gustavo|	Média|	Concluído
+Revisar responsividade do sistema|Gustavo	|Baixa|	Concluído
 
 ---
 

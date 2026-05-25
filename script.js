@@ -1,96 +1,87 @@
-// LISTA DE CHAMADOS SIMULADOS
+/* ELEMENTOS */
 
-const chamados = [
-    {
-        id: 1,
-        titulo: "Problema na impressora",
-        status: "Aberto"
-    },
+const ticketForm = document.getElementById("ticketForm");
 
-    {
-        id: 2,
-        titulo: "Internet lenta",
-        status: "Em andamento"
-    },
+const ticketList = document.getElementById("ticketList");
 
-    {
-        id: 3,
-        titulo: "Troca de senha",
-        status: "Concluído"
-    }
-];
+/* DADOS */
 
+let tickets = [];
 
-// EXIBIR CHAMADOS
+let ticketId = 1;
 
-const listaChamados = document.getElementById("listaChamados");
+/* VALIDAÇÃO */
 
-function mostrarChamados(lista){
+function validateFields(title, description, status) {
 
-    listaChamados.innerHTML = "";
+    return (
 
-    lista.forEach(chamado => {
+        title.trim() !== "" &&
 
-        listaChamados.innerHTML += `
+        description.trim() !== "" &&
+
+        status.trim() !== ""
+    );
+}
+
+/* RENDERIZAÇÃO */
+
+function renderTickets() {
+
+    ticketList.innerHTML = "";
+
+    tickets.forEach(ticket => {
+
+        ticketList.innerHTML += `
+
             <tr>
-                <td>${chamado.id}</td>
-                <td>${chamado.titulo}</td>
-                <td>${chamado.status}</td>
+
+                <td>${ticket.id}</td>
+
+                <td>${ticket.title}</td>
+
+                <td>${ticket.status}</td>
+
             </tr>
+
         `;
     });
 }
 
-mostrarChamados(chamados);
+/* EVENTO DO FORMULÁRIO */
 
-
-// FORMULÁRIO
-
-const formChamado = document.getElementById("formChamado");
-
-formChamado.addEventListener("submit", function(event){
+ticketForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    const titulo = document.getElementById("titulo").value;
-    const descricao = document.getElementById("descricao").value;
-    const status = document.getElementById("status").value;
+    const title = document.getElementById("ticketTitle").value;
 
-    if(titulo === "" || descricao === "" || status === ""){
+    const description = document.getElementById("ticketDescription").value;
 
-        alert("Preencha todos os campos!");
+    const status = document.getElementById("ticketStatus").value;
 
-    }else{
+    if (!validateFields(title, description, status)) {
 
-        const novoChamado = {
-            id: chamados.length + 1,
-            titulo: titulo,
-            status: status
-        };
+        alert("Preencha todos os campos.");
 
-        chamados.push(novoChamado);
-
-        mostrarChamados(chamados);
-
-        document.getElementById("mensagem").innerText =
-        "Chamado cadastrado com sucesso!";
-
-        formChamado.reset();
+        return;
     }
+
+    const newTicket = {
+
+        id: ticketId++,
+
+        title,
+
+        description,
+
+        status
+    };
+
+    tickets.push(newTicket);
+
+    renderTickets();
+
+    ticketForm.reset();
 });
 
-
-// BUSCA DINÂMICA
-
-const buscar = document.getElementById("buscar");
-
-buscar.addEventListener("keyup", () => {
-
-    const texto = buscar.value.toLowerCase();
-
-    const filtrados = chamados.filter(chamado =>
-        chamado.titulo.toLowerCase().includes(texto)
-    );
-
-    mostrarChamados(filtrados);
-});

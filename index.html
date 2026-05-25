@@ -1,74 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Desk MVP</title>
+<html lang="pt-BR">
 
-    <link rel="stylesheet" href="css/style.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Help Desk</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
 </head>
+
 <body>
 
-    <header>
+    <header class="header">
+
         <h1>Sistema Help Desk</h1>
 
-        <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Abrir Chamado</a>
-            <a href="#">Sair</a>
-        </nav>
     </header>
 
-    <main>
+    <main class="container">
 
-        <section class="formulario">
-            <h2>Abertura de Chamado</h2>
+        <section class="formSection">
 
-            <form id="formChamado">
+            <h2>Abertura de Chamados</h2>
 
-                <input type="text" id="titulo" placeholder="Título do chamado">
+            <form id="ticketForm">
 
-                <textarea id="descricao" placeholder="Descrição do problema"></textarea>
+                <input
+                    type="text"
+                    id="ticketTitle"
+                    placeholder="Título do chamado"
+                    required
+                >
 
-                <select id="status">
-                    <option value="">Selecione o status</option>
-                    <option>Aberto</option>
-                    <option>Em andamento</option>
-                    <option>Concluído</option>
+                <textarea
+                    id="ticketDescription"
+                    placeholder="Descrição do problema"
+                    required
+                ></textarea>
+
+                <select
+                    id="ticketStatus"
+                    required
+                >
+
+                    <option value="">
+                        Selecione o status
+                    </option>
+
+                    <option>
+                        Aberto
+                    </option>
+
+                    <option>
+                        Em andamento
+                    </option>
+
+                    <option>
+                        Concluído
+                    </option>
+
                 </select>
 
-                <button type="submit">Cadastrar Chamado</button>
+                <button type="submit">
+                    Cadastrar Chamado
+                </button>
 
             </form>
 
-            <p id="mensagem"></p>
         </section>
 
-        <section class="lista">
-            <h2>Chamados Abertos</h2>
+        <section class="tableSection">
 
-            <input type="text" id="buscar" placeholder="Buscar chamado">
+            <h2>Lista de Chamados</h2>
 
             <table>
 
                 <thead>
+
                     <tr>
+
                         <th>ID</th>
+
                         <th>Título</th>
+
                         <th>Status</th>
+
                     </tr>
+
                 </thead>
 
-                <tbody id="listaChamados">
-
+                <tbody id="ticketList">
                 </tbody>
 
             </table>
+
         </section>
 
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
+
 </html>

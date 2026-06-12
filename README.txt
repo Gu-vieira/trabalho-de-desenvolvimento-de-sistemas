@@ -149,4 +149,41 @@ Padrão visual:
 - Botões azuis padronizados
 - Mensagens de erro em vermelho
 - Mensagens de sucesso em verde
+----------------------------------------------------
+## Checklist de Verificação Final
+
+Antes da entrega do projeto, foram realizadas as seguintes verificações:
+
+### Execução
+
+* Sistema abre corretamente no navegador.
+* Arquivos HTML, CSS e JavaScript carregam sem erros visíveis.
+* Funcionamento testado em ambiente local.
+
+### Funcionalidades
+
+* Cadastro de chamados funcionando.
+* Validação dos campos obrigatórios do formulário.
+* Exibição de mensagens de erro quando os dados não são preenchidos corretamente.
+* Exibição de mensagem de sucesso após o cadastro.
+* Busca e filtragem de chamados implementadas.
+* Manipulação dinâmica do conteúdo da página utilizando JavaScript.
+
+### Organização
+
+* Estrutura do projeto organizada em arquivos separados (HTML, CSS e JavaScript).
+* Código comentado e padronizado.
+* README atualizado com informações de utilização do sistema.
+
+### Evidências
+
+O funcionamento do protótipo foi validado por meio de testes no navegador e registrado através de capturas de tela para fins de entrega da atividade.
+
+### Pendências Conhecidas
+
+Não foram identificadas pendências críticas que impeçam a utilização do protótipo ou a demonstração de suas funcionalidades principais.
+
+### Status da Entrega
+
+Protótipo revisado, testado e apto para apresentação e entrega final.
 

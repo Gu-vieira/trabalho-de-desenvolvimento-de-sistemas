@@ -127,3 +127,59 @@ th {
 
     color: white;
 }
+/* ACESSIBILIDADE */
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    outline: 2px solid #0d6efd;
+}
+
+/* FEEDBACK VISUAL */
+
+.message {
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.success {
+
+    background-color: #d1e7dd;
+
+    color: #0f5132;
+}
+
+.error {
+
+    background-color: #f8d7da;
+
+    color: #842029;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width: 95%;
+    }
+
+    th,
+    td {
+
+        padding: 8px;
+    }
+
+    table {
+
+        font-size: 14px;
+    }
+}

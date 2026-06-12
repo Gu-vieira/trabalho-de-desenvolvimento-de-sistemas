@@ -111,3 +111,42 @@ gustavo vieira
 | Evitar repetição CSS | Sim | css/style.css |
 | Comentários úteis | Sim | script.js |
 | README atualizado | Sim | README.md |
+
+--------------------------------------------------
+
+MELHORIAS APLICADAS NA SA05
+
+Responsável: Gustavo Vieira
+
+1. Mensagens de validação mais claras
+Status: Concluído
+
+2. Feedback visual de erro e sucesso
+Status: Concluído
+
+3. Acessibilidade básica
+Status: Concluído
+
+4. Responsividade mínima
+Status: Concluído
+
+--------------------------------------------------
+
+PADRÕES DEFINIDOS
+
+Validações:
+- "Preencha todos os campos obrigatórios."
+
+Sucesso:
+- "Chamado cadastrado com sucesso."
+
+Padrão de nomes:
+- Arquivos em minúsculo
+- Variáveis e funções em camelCase
+
+Padrão visual:
+- Espaçamento de 20px
+- Botões azuis padronizados
+- Mensagens de erro em vermelho
+- Mensagens de sucesso em verde
+

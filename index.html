@@ -1,115 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<h2>Abertura de Chamados</h2>
 
-<head>
+<div id="messageBox"></div>
 
-    <meta charset="UTF-8">
+<form id="ticketForm">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
+    <label for="ticketTitle">
+        Título do Chamado
+    </label>
+
+    <input
+        type="text"
+        id="ticketTitle"
+        placeholder="Título do chamado"
     >
 
-    <title>Help Desk</title>
+    <label for="ticketDescription">
+        Descrição
+    </label>
 
-    <link
-        rel="stylesheet"
-        href="./css/style.css"
-    >
+    <textarea
+        id="ticketDescription"
+        placeholder="Descrição do problema"
+    ></textarea>
 
-</head>
+    <label for="ticketStatus">
+        Status
+    </label>
 
-<body>
+    <select id="ticketStatus">
 
-    <header class="header">
+        <option value="">
+            Selecione o status
+        </option>
 
-        <h1>Sistema Help Desk</h1>
+        <option>Aberto</option>
+        <option>Em andamento</option>
+        <option>Concluído</option>
 
-    </header>
+    </select>
 
-    <main class="container">
+    <button type="submit">
+        Cadastrar Chamado
+    </button>
 
-        <section class="formSection">
+</form>
 
-            <h2>Abertura de Chamados</h2>
-
-            <form id="ticketForm">
-
-                <input
-                    type="text"
-                    id="ticketTitle"
-                    placeholder="Título do chamado"
-                    required
-                >
-
-                <textarea
-                    id="ticketDescription"
-                    placeholder="Descrição do problema"
-                    required
-                ></textarea>
-
-                <select
-                    id="ticketStatus"
-                    required
-                >
-
-                    <option value="">
-                        Selecione o status
-                    </option>
-
-                    <option>
-                        Aberto
-                    </option>
-
-                    <option>
-                        Em andamento
-                    </option>
-
-                    <option>
-                        Concluído
-                    </option>
-
-                </select>
-
-                <button type="submit">
-                    Cadastrar Chamado
-                </button>
-
-            </form>
-
-        </section>
-
-        <section class="tableSection">
-
-            <h2>Lista de Chamados</h2>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>ID</th>
-
-                        <th>Título</th>
-
-                        <th>Status</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody id="ticketList">
-                </tbody>
-
-            </table>
-
-        </section>
-
-    </main>
-
-    <script src="./js/script.js"></script>
-
-</body>
-
-</html>
